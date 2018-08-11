@@ -15,7 +15,7 @@ class RouteServiceProvider extends ServiceProvider
      * @var string
      */
     protected $namespace = 'App\Http\Controllers';
-
+    protected $namespace1 = '';
     /**
      * Define your route model bindings, pattern filters, etc.
      *
@@ -39,6 +39,8 @@ class RouteServiceProvider extends ServiceProvider
 
         $this->mapWebRoutes();
 
+        $this->mapCustomRoutes();
+        
         //
     }
 
@@ -69,5 +71,13 @@ class RouteServiceProvider extends ServiceProvider
              ->middleware('api')
              ->namespace($this->namespace)
              ->group(base_path('routes/api.php'));
+    }
+
+    protected function mapCustomRoutes()
+    {
+        Route::prefix('package')
+             ->middleware('web')
+             ->namespace($this->namespace1)
+             ->group(base_path('packages/sharif/calculator/src/routes.php'));
     }
 }

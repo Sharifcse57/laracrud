@@ -12,22 +12,8 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return base_path('packages/sharif/calculator/src/views');
 });
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/datatables', 'PostController@datatables')->name('datatables.getdata');
-
-Route::resource('posts', 'PostController');
-Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']], function () {
-    '\vendor\uniSharp\LaravelFilemanager\Lfm::routes()';
-});
-Route::get('/getapidata', 'PostController@api')->name('ajax.getapidata');
-
-// Route::get('/laravel-filemanager', '\vendor\uniSharp\LaravelFilemanager\src\Controllers\LfmController@show');
-// Route::post('/laravel-filemanager/upload', '\vendor\uniSharp\LaravelFilemanager\src\Controllers\UploadController@upload');
 
 
 Route::get('add/{a}/{b}', 'Sharif\Calculator\CalculatorController@add');

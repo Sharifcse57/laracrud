@@ -1,0 +1,12 @@
+{
+    "name": "sharif/calculator",
+    "description": "This demo package will do some calculations",
+    "authors": [
+        {
+            "name": "sharif",
+            "email": "sharifcse57@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}

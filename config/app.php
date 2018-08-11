@@ -167,6 +167,7 @@ return [
         /*
          * Package Service Providers...
          */
+        Sharif\Calculator\CalculatorServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -181,6 +182,7 @@ return [
         Collective\Html\HtmlServiceProvider::class,
         Unisharp\Ckeditor\ServiceProvider::class,
         Yajra\Datatables\DatatablesServiceProvider::class,
+        
        
        
 
